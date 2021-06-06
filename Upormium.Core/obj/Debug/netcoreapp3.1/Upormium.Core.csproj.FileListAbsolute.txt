@@ -1,4 +1,0 @@
-D:\Projects\Upormium\Upormium.Core\obj\Debug\netcoreapp3.1\Upormium.Core.csprojAssemblyReference.cache
-D:\Projects\Upormium\Upormium.Core\obj\Debug\netcoreapp3.1\Upormium.Core.AssemblyInfoInputs.cache
-D:\Projects\Upormium\Upormium.Core\obj\Debug\netcoreapp3.1\Upormium.Core.AssemblyInfo.cs
-D:\Projects\Upormium\Upormium.Core\obj\Debug\netcoreapp3.1\Upormium.Core.csproj.CoreCompileInputs.cache
