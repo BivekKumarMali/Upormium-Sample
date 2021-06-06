@@ -1,0 +1,132 @@
+﻿.inline-side {
+    content: "";
+    display: table;
+    clear: both;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.left-side {
+    width: 20%;
+    height: 100vh;
+    background-color: #673ab7;
+}
+
+.right-side {
+    height: 100vh;
+    width: 100%;
+    background-color: #f9f9f9;
+    box-shadow: -9px 2px 20px -1px rgba(0, 0, 0, 0.51);
+    -webkit-box-shadow: -9px 2px 20px -1px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: -9px 2px 20px -1px rgba(0, 0, 0, 0.51);
+}
+
+.custom-md-container {
+    width: 400px;
+    height: 30vh;
+}
+
+.center {
+    position: relative;
+    top: 50%;
+    bottom: 20%;
+    left: 20%;
+    -webkit-transform: translate(-20%, -50%);
+    transform: translate(-20%, -50%);
+}
+
+.heading {
+    font-weight: 500;
+    font-size: 28px;
+    color: #673ab7;
+}
+
+input {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 1em;
+    margin-top: 0.1em;
+    border-bottom: 2px solid black;
+}
+
+    input:focus {
+        outline: none;
+    }
+
+.inputbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.space-evenly {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+.primary-button {
+    padding: 0.8em 1.2em;
+    font-weight: 600;
+    width: 150px;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: #f9f9f9;
+    background-color: #673ab7;
+    line-height: 1em;
+    letter-spacing: 0.6px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+    border: 0;
+    outline: 0;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+}
+
+.login-button {
+    width: 150px;
+}
+
+.primary-anchor {
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: #673ab7;
+    line-height: 1em;
+    letter-spacing: 0.6px;
+    border: 0;
+    outline: 0;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+}
+
+    .primary-anchor:hover {
+        color: #f9c213;
+    }
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
