@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Upormium.Model\Upormium.Model.csproj" />
+    <ProjectReference Include="..\Upormium.Model\Upormium.DomainModel.csproj" />
     <ProjectReference Include="..\Upormium.Util\Upormium.Util.csproj" />
   </ItemGroup>
 

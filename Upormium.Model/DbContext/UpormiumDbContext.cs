@@ -4,10 +4,10 @@ using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Upormium.Model.Models;
-using Upormium.Model.Models.Users;
+using Upormium.DomainModel.Models.Users;
+using Upormium.DomainModel.Models;
 
-namespace Upormium.Model.DbContext
+namespace Upormium.DomainModel.DbContext
 {
     public class UpormiumDbContext : IdentityDbContext<User>
     {

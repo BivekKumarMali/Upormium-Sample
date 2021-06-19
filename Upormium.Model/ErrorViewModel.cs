@@ -1,6 +1,6 @@
 using System;
 
-namespace Upormium.Models
+namespace Upormium.DomainModel
 {
     public class ErrorViewModel
     {

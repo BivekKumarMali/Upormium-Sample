@@ -1,4 +1,4 @@
-﻿namespace Upormium.Model.ApplicationClasses.Accounts
+﻿namespace Upormium.DomainModel.ApplicationClasses.Accounts
 {
     public class RegisterViewModel
     {

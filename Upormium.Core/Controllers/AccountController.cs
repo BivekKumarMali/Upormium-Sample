@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
-using Upormium.Model.ApplicationClasses.Accounts;
-using Upormium.Model.Models.Users;
+using Upormium.DomainModel.ApplicationClasses.Accounts;
+using Upormium.DomainModel.Models.Users;
 using Upormium.Util.StringConstants;
 using SignInResult = Microsoft.AspNetCore.Identity.SignInResult;
 
@@ -59,26 +59,35 @@ namespace Upormium.Controllers
         {
             if (!ModelState.IsValid)
             {
-                ModelState.AddModelError(string.Empty, _stringConstant.InvalidModelError);
+                ViewBag.Error = null;
                 return View(loginModel);
             }
 
             User user = await _userManager.FindByEmailAsync(loginModel.Email);
             if(user == null)
             {
-                ModelState.AddModelError(string.Empty, _stringConstant.InvalidLoginError);
+                ViewBag.Error = _stringConstant.InvalidLoginError;
                 return View(loginModel);
             }
 
-            SignInResult result = await _signInManager.PasswordSignInAsync(loginModel.Email, loginModel.Password, isPersistent: false, lockoutOnFailure: false);
+            SignInResult result = await _signInManager.PasswordSignInAsync(user.UserName, loginModel.Password, loginModel.RememberMe, loginModel.LockoutOnFailure++ == 3);
 
             if (!result.Succeeded)
             {
-                ModelState.AddModelError(string.Empty, _stringConstant.InvalidLoginError);
+                ViewBag.Error = _stringConstant.InvalidLoginError;
+                loginModel.LockoutOnFailure += 1;
                 return View(loginModel);
             }
-
+            if (string.IsNullOrEmpty(returnUrl))
+                return RedirectToAction("Index", "Home");
             return Redirect(returnUrl);
+        }
+
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult Register(string returnUrl)
+        {
+            return View();
         }
         #endregion
         #region Private Methods

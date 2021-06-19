@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System;
 
-namespace Upormium.Model.Models.Users
+namespace Upormium.DomainModel.Models.Users
 {
     public class User: IdentityUser
     {

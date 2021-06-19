@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System;
 using System.Threading.Tasks;
-using Upormium.Model.ApplicationClasses;
-using Upormium.Model.Models.Users;
+using Upormium.DomainModel.ApplicationClasses;
+using Upormium.DomainModel.Models.Users;
 using Upormium.Util.StringConstants;
 
 namespace Upormium.Util.SeedDatabase

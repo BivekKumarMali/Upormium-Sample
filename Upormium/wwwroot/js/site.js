@@ -7,3 +7,7 @@ function showLoginPage() {
 	document.getElementById("register").style.display = "none";
 	document.getElementById("login").style.display = "block";
 }
+
+function validateLogInForm() {
+
+}

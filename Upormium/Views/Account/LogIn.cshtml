@@ -1,58 +1,34 @@
-﻿<div class="inline-side">
+﻿@model Upormium.DomainModel.ApplicationClasses.Accounts.LoginViewModel
+
+<div class="inline-side">
     <div class="left-side"></div>
     <div class="right-side" id="login">
         <div class="custom-md-container center space-evenly">
             <h4 class="heading ml-10">Login</h4>
-            <form class="space-evenly">
+            <form class="space-evenly" asp-controller="Account" asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" autocomplete="off">
+                @if (ViewBag.Error != null)
+                {
+                    <div class="danger-text">@ViewBag.Error</div>
+
+                }
                 <div class="inputbox">
-                    <label for="email">Email</label>
+                    <label for="email">Email<em class="danger-text">*</em></label>
                     <input type="text" name="Email" id="email" />
                 </div>
+                <div class="danger-text ml-20">@Html.ValidationMessageFor(m => m.Email)</div>
                 <div class="inputbox">
-                    <label for="email">Password</label>
+                    <label for="email">Password<em class="danger-text">*</em></label>
                     <input type="text" name="Password" id="password" />
                 </div>
+                <div class="danger-text ml-20">@Html.ValidationMessageFor(m => m.Password)</div>
                 <div class="login-page-buttons">
-                    <button class="primary-button mt-10 mr-10 ml-10">
+                    <button class="primary-button mt-10 mr-10 ml-10" type="submit">
                         Log In
                     </button>
                     <a class="primary-anchor login-button"
-                       onclick="showRegisterationPage()"><u>Register</u></a>
+                       asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]"><u>Register</u></a>
                 </div>
             </form>
         </div>
     </div>
-    <div class="right-side" id="register" style="display: none">
-        <div class="custom-md-container center space-evenly">
-            <h4 class="heading ml-10">Register</h4>
-            <form class="space-evenly">
-                <div class="inputbox">
-                    <label for="email">Email</label>
-                    <input type="text" name="Email" id="email" />
-                </div>
-                <div class="inputbox">
-                    <label for="password">Password</label>
-                    <input type="password" name="Password" id="password" />
-                </div>
-                <div class="inputbox">
-                    <label for="confirm-password">Confirm Password</label>
-                    <input type="password"
-                           name="ConfirmPassword"
-                           id="confirm-password" />
-                </div>
-                <div class="login-page-buttons">
-                    <button class="primary-button mt-10 mr-10 ml-10">
-                        Register
-                    </button>
-                    <a class="primary-anchor login-button" onclick="showLoginPage()"><u>Log In</u></a>
-                </div>
-            </form>
-        </div>
-    </div>
- </div>
-
-    <script>
-        window.onload = function setPage() {
-            document.getElementById("register").style.display = "none";
-        };
-    </script>
+</div>

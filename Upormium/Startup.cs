@@ -6,9 +6,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
-using Upormium.Model.ApplicationClasses;
-using Upormium.Model.DbContext;
-using Upormium.Model.Models.Users;
+using Upormium.DomainModel.ApplicationClasses;
+using Upormium.DomainModel.DbContext;
+using Upormium.DomainModel.Models.Users;
 using Upormium.Util.SeedDatabase;
 using Upormium.Util.StringConstants;
 
@@ -67,6 +67,7 @@ namespace Upormium
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseAuthentication();
 
             app.UseRouting();
 

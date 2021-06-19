@@ -15,7 +15,7 @@
         {
             get
             {
-                return "User or Password Invalid";
+                return "User or password is invalid";
             }
         }
         #endregion

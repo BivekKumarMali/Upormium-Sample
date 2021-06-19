@@ -1,4 +1,4 @@
-﻿namespace Upormium.Model.ApplicationClasses
+﻿namespace Upormium.DomainModel.ApplicationClasses
 {
     public class AdminDetails
     {

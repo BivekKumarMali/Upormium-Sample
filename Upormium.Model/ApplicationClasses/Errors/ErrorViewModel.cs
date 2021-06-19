@@ -1,4 +1,4 @@
-﻿namespace Upormium.Model.ApplicationClasses.Errors
+﻿namespace Upormium.DomainModel.ApplicationClasses.Errors
 {
     public class ErrorViewModel
     {

@@ -17,7 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Upormium.Core\Upormium.Core.csproj" />
-    <ProjectReference Include="..\Upormium.Model\Upormium.Model.csproj" />
+    <ProjectReference Include="..\Upormium.Model\Upormium.DomainModel.csproj" />
   </ItemGroup>
 
 </Project>

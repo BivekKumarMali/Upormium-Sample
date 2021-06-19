@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Upormium.Model\Upormium.Model.csproj" />
+    <ProjectReference Include="..\Upormium.Model\Upormium.DomainModel.csproj" />
   </ItemGroup>
 
 </Project>

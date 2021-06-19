@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Upormium.Model.Models
+namespace Upormium.DomainModel.Models
 {
     public class BaseModel
     {
