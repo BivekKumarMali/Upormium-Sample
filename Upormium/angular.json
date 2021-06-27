@@ -1,0 +1,82 @@
+{
+	"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+	"version": 1,
+	"newProjectRoot": "projects",
+	"projects": {
+		"Upormium": {
+			"projectType": "application",
+			"schematics": {
+				"@schematics/angular:component": {
+					"style": "scss"
+				}
+			},
+			"root": "",
+			"sourceRoot": "wwwroot/app",
+			"prefix": "app",
+			"architect": {
+				"build": {
+					"builder": "@angular-devkit/build-angular:browser",
+					"options": {
+						"outputPath": "./wwwroot/script",
+						"index": "wwwroot/app/index.html",
+						"main": "wwwroot/app/main.ts",
+						"polyfills": "wwwroot/app/polyfills.ts",
+						"tsConfig": "tsconfig.app.json",
+						"aot": true,
+						"assets": [
+							{
+								"glob": "**/*",
+								"input": "wwwroot/images",
+								"output": "/images"
+							}
+						],
+						"styles": ["wwwroot/css/style.scss"],
+						"scripts": []
+					},
+					"configurations": {
+						"production": {
+							"fileReplacements": [
+								{
+									"replace": "wwwroot/app/environments/environment.ts",
+									"with": "wwwroot/app/environments/environment.prod.ts"
+								}
+							],
+							"optimization": true,
+							"outputHashing": "none",
+							"sourceMap": false,
+							"namedChunks": false,
+							"extractLicenses": true,
+							"aot": false,
+							"vendorChunk": false,
+							"buildOptimizer": true,
+							"budgets": [
+								{
+									"type": "initial",
+									"maximumWarning": "2mb",
+									"maximumError": "5mb"
+								},
+								{
+									"type": "anyComponentStyle",
+									"maximumWarning": "6kb",
+									"maximumError": "10kb"
+								}
+							]
+						}
+					}
+				},
+				"serve": {
+					"builder": "@angular-devkit/build-angular:dev-server",
+					"options": {
+						"browserTarget": "Upormium:build"
+					},
+					"configurations": {
+						"production": {
+							"browserTarget": "Upormium:build:production"
+						}
+					}
+				}
+			}
+		}
+	},
+	"defaultProject": "Upormium"
+}
